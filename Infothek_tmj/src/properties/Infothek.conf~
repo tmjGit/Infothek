@@ -1,0 +1,18 @@
+#Kommentar
+#Schlüssel-Wert-Paare
+datetimeformat=yyyy-MM-dd HH:mm
+logfilename
+logfilepath
+loglevel=trace
+logmetalevel=debug
+logmetaformat={date:yyyy-MM-dd HH:mm:ss} {level} [{thread}] {class}.{method}: {message}
+logformat={date:yyyy-MM-dd HH:mm:ss} {level}: {message}
+language=de_DE
+#pwd=
+driver=jdbc
+protocol=mysql
+host=localhost
+port=3306
+dbname=InfoThek
+user=root
+password=

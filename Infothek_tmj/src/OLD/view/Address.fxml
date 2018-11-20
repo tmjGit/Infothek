@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddressController">
+   <top>
+      <Button mnemonicParsing="false" onAction="#refreshBtAction" text="Anzeige aktualisieren" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <TabPane BorderPane.alignment="CENTER">
+         <tabs>
+            <Tab text="Übersicht">
+               <content>
+                  <TableView fx:id="tableView" editable="true" prefHeight="400.0" prefWidth="600.0" />
+               </content>
+            </Tab>
+            <Tab text="Eingabe">
+               <content>
+                  <AnchorPane fx:id="inputPane" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#saveBtAction" text="Speichern" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="212.0" AnchorPane.rightAnchor="212.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <Label fx:id="feedbackT" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

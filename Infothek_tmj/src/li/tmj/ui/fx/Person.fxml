@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="624.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="li.tmj.ui.fx.PersonController">
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+         	<Label fx:id="idT" minWidth="20" text="ID">
+               <HBox.margin>
+                  <Insets left="6.0" />
+               </HBox.margin></Label>
+            <TextField fx:id="idFld" maxHeight="20.0" prefWidth="35" >
+            </TextField>
+         	<Label minWidth="50.0" />
+            <Button fx:id="searchBt" mnemonicParsing="false" onAction="#searchBtAction" />
+            <Button fx:id="newWindowBt" mnemonicParsing="false" onAction="#newWindowBtAction" />
+            <Button fx:id="menuBt" mnemonicParsing="false" onAction="#menuBtAction" />
+            <Button fx:id="submitBt" mnemonicParsing="false" onAction="#submitBtAction"  />
+            <Label fx:id="infoT">
+             
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <center>
+		<AnchorPane fx:id="anchorPane" prefHeight="200.0" prefWidth="200.0">
+           	<children>
+           	</children>
+		</AnchorPane> 
+   </center>
+</BorderPane>

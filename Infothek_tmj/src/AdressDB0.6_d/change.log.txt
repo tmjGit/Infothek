@@ -1,0 +1,11 @@
+-findAll
+-TableView
+-insert, formular
+-delete Datensatz
+-update
+-Benutzermeldung
+-ExceptionHandling
+-mehrere Datensätze löschen
+-Filter mit ComboBox
+-PLZTextField: CustomerComponent
+

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import components.PLZTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.111"
+	xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.cimdata.adressdb.ui.AdressController">
+	<center>
+		<TabPane>
+			<tabs>
+				<Tab closable="false" text="Übersicht">
+					<content>
+						<TableView fx:id="personTableView" editable="true"
+							prefHeight="307.0" prefWidth="696.0" BorderPane.alignment="CENTER">
+							<columns>
+								<TableColumn fx:id="idColumn" prefWidth="75.0" text="Id">
+									<cellValueFactory>
+										<PropertyValueFactory property="id" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn fx:id="vornameColumn" prefWidth="75.0"
+									text="Vorname">
+
+									<cellValueFactory>
+										<PropertyValueFactory property="vorname" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn fx:id="nachnameColumn" prefWidth="75.0"
+									text="Nachname">
+									<cellValueFactory>
+										<PropertyValueFactory property="nachname" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn fx:id="plzColumn" prefWidth="75.0"
+									text="PLZ">
+									<cellValueFactory>
+										<PropertyValueFactory property="plz" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn fx:id="ortColumn" prefWidth="75.0"
+									text="Ort">
+									<cellValueFactory>
+										<PropertyValueFactory property="ort" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn fx:id="strasseColumn" prefWidth="75.0"
+									text="Straße">
+									<cellValueFactory>
+										<PropertyValueFactory property="strasse" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn fx:id="telefonColumn" onEditCommit="#editCommit"
+									prefWidth="75.0" text="Telefon">
+									<cellValueFactory>
+										<PropertyValueFactory property="telefon" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn fx:id="mobilColumn" onEditCommit="#editCommit"
+									prefWidth="75.0" text="Mobil">
+									<cellValueFactory>
+										<PropertyValueFactory property="mobil" />
+									</cellValueFactory>
+								</TableColumn>
+								<TableColumn fx:id="emailColumn" onEditCommit="#editCommit"
+									prefWidth="75.0" text="E-Mail">
+									<cellValueFactory>
+										<PropertyValueFactory property="email" />
+									</cellValueFactory>
+								</TableColumn>
+							</columns>
+						</TableView>
+					</content>
+				</Tab>
+				<Tab text="Neuer Datensatz">
+					<content>
+						<AnchorPane prefHeight="333.0" prefWidth="696.0">
+							<children>
+								<TextField fx:id="vornameFeld" layoutX="68.0" layoutY="29.0"
+									prefHeight="25.0" prefWidth="199.0" promptText="Vorname">
+
+								</TextField>
+								<TextField fx:id="nachnameFeld" layoutX="68.0"
+									layoutY="54.0" prefHeight="25.0" prefWidth="199.0" promptText="Nachname">
+
+								</TextField>
+								<PLZTextField fx:id="plzFeld" layoutX="68.0"
+									layoutY="79.0" prefHeight="25.0" prefWidth="200.0" promptText="PLZ" />
+								<TextField fx:id="ortFeld" layoutX="68.0" layoutY="104.0"
+									prefHeight="25.0" prefWidth="199.0" promptText="Ort">
+
+								</TextField>
+								<TextField fx:id="strasseFeld" layoutX="69.0" layoutY="129.0"
+									prefHeight="25.0" prefWidth="199.0" promptText="Straße/ Nr.">
+
+								</TextField>
+								<TextField fx:id="telefonFeld" layoutX="69.0" layoutY="154.0"
+									prefHeight="25.0" prefWidth="199.0" promptText="Telefon">
+
+								</TextField>
+								<TextField fx:id="mobilFeld" layoutX="69.0" layoutY="179.0"
+									prefHeight="25.0" prefWidth="199.0" promptText="Mobill">
+
+								</TextField>
+								<TextField fx:id="emailFeld" layoutX="69.0" layoutY="204.0"
+									prefHeight="25.0" prefWidth="199.0" promptText="E-Mail">
+
+								</TextField>
+								<Button layoutX="339.0" layoutY="278.0" mnemonicParsing="false"
+									onAction="#save" text="Save" />
+							</children>
+						</AnchorPane>
+					</content>
+				</Tab>
+
+
+			</tabs>
+		</TabPane>
+	</center>
+	<top>
+		<ToolBar prefHeight="40.0" prefWidth="200.0"
+			BorderPane.alignment="CENTER">
+			<items>
+				<Button mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+				<Label fx:id="infoLabel" prefHeight="35.0" prefWidth="274.0"
+					textFill="#a82b1d">
+					<font>
+						<Font size="24.0" />
+					</font>
+				</Label>
+				<ComboBox fx:id="filterComboBox" prefWidth="150.0">
+
+				</ComboBox>
+				<TextField fx:id="suchFeld" />
+				<Button mnemonicParsing="false" onAction="#find" text="Find" />
+			</items>
+		</ToolBar>
+	</top>
+</BorderPane>

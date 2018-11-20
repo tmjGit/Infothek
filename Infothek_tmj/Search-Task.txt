@@ -1,0 +1,15 @@
+searchBtAction
+	Suche? -> Suchmodus aktivieren: 
+
+
+searchBtAction
+	Suchmodus? -> 
+
+
+
+
+
+submitBtAction
+	Suchmodus aktiv? -> Suche ausführen: 
+		Runnable r
+	

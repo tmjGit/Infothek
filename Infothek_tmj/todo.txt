@@ -1,0 +1,14 @@
+Infothek Java
+
+fxml mit mehreren Fenstern und Layouts, mit Vererbung, so dass Layouts leicht klassenweise geändert werden können. Setting als XML abspeichern.
+
+<-> Config mit XML erweitern
+
+
+Datenbank relationen: spezielle relationale Klassen, die Relationen realisieren, so dass man an einzelne relationale Felder leicht mit .-Notation heran kommt.
+
+
+Datenbankconstraints per Formel/Klasse/Setting realisieren, nicht (wie zunächst) fest programmiert.
+
+
+Config: Erweiterung, so dass Nicht Gefundenes automatisch in einer entsprechenden Datei mit Bspw. Endung missing statt properties gespeichert wird.
